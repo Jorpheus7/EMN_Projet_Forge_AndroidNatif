@@ -1,0 +1,40 @@
+
+<ion-view view-title="Configuration du membre">
+
+  <ion-content>
+    <div class="list">
+   
+    	<div class="item item-divider">
+    		Membre
+  		</div>
+    
+    	<div ng-repeat="member in members">
+    		<div ng-if="member.idPerson == idMember">
+    			<div class="item item-thumbnail-left">
+              <img ng-click="getPhoto(member.idPerson)" id="img" ng-src={{member.picture}}>
+      			
+            <div ng-click="modify(member.idPerson, member.name, member.firstname)">
+              <h2>{{member.firstname}} {{member.name}}</h2>
+
+              <p>{{(member.debt)/100}} €</p>
+            </div>
+    			</div>
+
+    		  <div class="item item-divider">
+    				Options
+  				</div>
+
+  		  	<div class ="item">
+      				<button ng-click="discharge(member.idPerson, member.name, member.firstname)" id="button-1" class="item button-large button icon-left ion-card button-block button-balanced ">Acquitter la dette</button>
+	  
+	  				  <button ng-click="getPhoto(member.idPerson)" id="button-3" class="item button-large button icon-left ion-image button-block button-balanced">Choisir une image</button>
+	  
+					    <button ng-click="capturePhoto(member.idPerson)" id="button-5" class="item button icon-left ion-camera button-block button-large button-balanced">Prendre une photo</button>
+	  
+	  				  <button ng-click="delete($index, member.idPerson, member.name, member.firstname)" id="button-4" class="item button-large button icon-left ion-close-circled button-block button-balanced">Supprimer membre</button>
+    			</div>
+    		</div>
+	   	</div>
+	  </div>
+  </ion-content>
+</ion-view>

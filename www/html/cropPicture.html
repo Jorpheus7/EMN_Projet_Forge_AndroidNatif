@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <button class="button button-clear" ng-click="crop()">Rogner</button>
+    <h1 class="title">Rogner la photo</h1>
+    <button class="button button-clear" ng-click="closeCrop()">Fermer</button>
+  </ion-header-bar>
+  <ion-content>
+  <div class="card">
+    <div class="row">
+      <div class="col-20">
+      </div>
+
+      <div class="col-80">
+        <img id="target" src='{{modalData.src}}' ng-click="cropping()">
+
+        <input id="x" type="hidden" name="x"></input>
+        <input id="y" type="hidden" name="y"></input>
+        <input id="w" type="hidden" name="w"></input>
+        <input id="h" type="hidden" name="h"></input>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Acquitter un membre</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDischarge()">Fermer</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+    <form ng-submit="doDischarge()">
+      <div class="list">
+        <label class="item">
+          <p>
+          	Acquitter la dette de <b>{{modalData.firstname}} {{modalData.name}}</b> ?
+          </p>
+        </label>
+        <label class="item">
+          <button class="button button-large button-block button-balanced" type="submit">Acquitter</button>
+        </label>
+      </div>
+    </form>
+						
+  </ion-content>
+</ion-modal-view>

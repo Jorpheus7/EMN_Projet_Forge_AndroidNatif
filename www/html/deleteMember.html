@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Supprimer un membre</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeDelete()">Fermer</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+    <form ng-submit="doDelete()">
+      <div class="list">
+        <label class="item">
+          <p>
+          	Supprimer le membre <b>{{modalData.firstname}} {{modalData.name}}</b> ?
+          </p>
+        </label>
+        <label class="item">
+          <button class="button button-large button-block button-balanced" type="submit">Supprimer</button>
+        </label>
+      </div>
+    </form>
+						
+  </ion-content>
+</ion-modal-view>

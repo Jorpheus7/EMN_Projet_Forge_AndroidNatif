@@ -1,0 +1,17 @@
+
+
+<ion-view view-title="Membres"> 
+	<ion-content>
+	
+		<div class="list">
+			<div ng-repeat="member in members">
+				<div class="item item-thumbnail-left" href="" ng-click="increase(member.idPerson)"> 
+					<img ng-src={{member.picture}}>
+					<h2>{{member.firstname}} {{member.name}}</h2>
+					<p>{{(member.debt)/100}} €</p>
+				</div>
+			</div>
+		</div>
+		
+	</ion-content> 
+</ion-view>

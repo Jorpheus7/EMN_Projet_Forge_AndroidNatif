@@ -1,0 +1,27 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Modifier un membre</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModify()">Fermer</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+    <form ng-submit="doModify()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Nom</span>
+          <input type="text" ng-model="modalData.name" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Prénom</span>
+          <input type="text" ng-model="modalData.firstname" required>
+        </label>
+        <label class="item">
+          <button class="button button-large button-block button-balanced" type="submit">Valider</button>
+        </label>
+      </div>
+    </form>
+						
+  </ion-content>
+</ion-modal-view>

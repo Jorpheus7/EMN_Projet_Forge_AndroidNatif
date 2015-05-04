@@ -1,0 +1,36 @@
+<ion-view view-title="Configuration">
+  <ion-content>
+   <div class="list">
+   
+    <div class="item item-divider">
+    	Options
+  	</div>
+  	
+  	<div class ="item">
+      <button ng-click="add()" id="button-1" class="button icon-left ion-person-add button-large button-block button-balanced">Ajouter un membre</button>
+    </div>
+    <div class ="item">
+      <label id="label-1">Pénalité actuelle : {{(amountTag)/100}} €</label>
+	  <button ng-click="penality()" id="button-2" class="button icon-left ion-gear-a button-block button-large button-balanced">Modifier la pénalité</button>
+	  
+	</div>
+    
+    <div class="item item-divider">
+    	Membres
+  	</div>
+    
+      <div ng-repeat="member in members" >
+      
+    	<a class="item item-thumbnail-left" href="#/app/members/{{member.idPerson}}" >
+      		<img ng-src={{member.picture}}>
+      		<h2>{{member.firstname}} {{member.name}}</h2>
+      		<p>{{(member.debt)/100}} €</p>
+    	</a>
+
+      </div>
+
+	</div>
+
+  
+  </ion-content>
+</ion-view>
